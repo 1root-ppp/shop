@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/register</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- login/register container -->
+    <div class="container">
+        <!-- register -->
+        <form action="" name="sign-up-f1" onsubmit="" method="POST">
+            <div class="form-container sign-up-container">
+                <div class="form">
+                    <h2>注册</h2>
+                    <!-- span标签用来显示图标 检验是否满足正则表达式 -->
+                    <input onblur="checkUsername()" type="text" name="username" id="username"
+                        placeholder="名字..." />
+                    <span id="s_username"></span>
+                    
+                    <input onblur="checkTel()" type="tel" name="tel" id="tel" placeholder="电话..." />
+                    <span id="s_tel"></span>
+                    
+                    <input onblur="checkPassword()" type="password" name="password" id="password"
+                        placeholder="密码..." />
+                    <span id="s_password"></span>
+                    
+                    <input type="text" name="gender" id="gender" list="genderlist" placeholder="请选择性别...">
+                    <datalist id="genderlist">
+                        <option>男</option>
+                        <option>女</option>
+                    </datalist>
+                    <button class="signUp">注册</button>
+                </div>
+            </div>
+        </form>
+        <!-- login -->
+        <form action="" name="sign-in-f1" onsubmit="" method="POST">
+            <div class="form-container sign-in-container">
+                <div class="form">
+                    <h2>登录</h2>
+                    <input onblur="checkTelSign()" type="tel" name="tel" id="tel-Sign" placeholder="电话...">
+                    <span id="s_telSign"></span>
+                    <input onblur="checkPasswordSign()" type="password" name="password" id="password-Sign" placeholder="密码...">
+                    <span id="s_passwordSign"></span>
+                    <a href="#" class="forget-password">密码忘记了！</a>
+                    <button class="signIn">登录</button>
+                </div>
+            </div>
+        </form>
+        <!-- overlay container -->
+        <div class="overlay_container">
+            <div class="overlay">
+                <!-- overlay left -->
+                <div class="overlay_panel overlay_left_container">
+                    <h2>回到登录</h2>
+                    <p>为了与我们保持联系，请使用您的个人信息登录</p>
+                    <button id="sign-in">登录</button>
+                </div>
+                <!-- overlay right -->
+                <div class="overlay_panel overlay_right_container">
+                    <h2>您好,宝子！</h2>
+                    <p>输入您的个人资料，与我们一起开始旅程</p>
+                    <button id="sign-up">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

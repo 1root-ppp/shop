@@ -1,0 +1,395 @@
+/* index.css是用来美化首页的 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 内减模式 */
+    box-sizing: border-box;
+}
+
+li {
+    /* 去除前面的小点 */
+    list-style: none;
+}
+
+a {
+    /* 去除下划线 */
+    text-decoration: none;
+}
+
+/* 浮动的影响去除 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心  用来版心居中的*/
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    /* 上下一样的 */
+    margin: 30px auto;
+    padding-left: 150px;
+}
+
+h1 {
+    float: left;
+}
+
+/* 导航 */
+.nav {
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+    /* 测试的颜色 background-color: green; */
+}
+
+/* 因为导航区域的 三个导航不换行 执行浮动就行了 */
+.nav li {
+    float: left;
+    margin-right: 26px;
+}
+
+.nav li a {
+    /* 转显示模式 */
+    display: block;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 42px;
+    /* 字体的样式 */
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+
+/* 搜索区域 */
+.search {
+    /* 添加浮动 */
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search input {
+    float: left;
+    padding-left: 20px;
+    /*  左右加一起的尺寸要小于等于410*/
+    width: 360px;
+    height: 38px;
+    border: 0;
+}
+
+/* 这就是控制placeholder里面字体的方式 ！！ */
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.search button {
+    /* 因为图片会换行显示 浮动 */
+    float: left;
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+}
+
+.user {
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    line-height: 42px;
+}
+
+#login a:hover {
+    cursor: pointer;
+    color: red;
+}
+#login a{
+    color: #050505;
+}
+
+
+
+.banner {
+    height: 420px;
+    background-color: #e8e8e8;
+}
+.banner .wrapper {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 420px;
+    /* 750*6 */
+    width: 750px;
+    overflow: hidden;
+}
+ul.img_box{
+    position: absolute;
+    width: 4500px;
+    height: 420px;
+    left: 0;
+    top: 0;
+    transform: translateX(-750px);
+}
+.img_box li{
+    float: left;
+    list-style: none;
+}
+/* 图片大小 */
+.img_box li img{
+    width: 750px;
+}
+/* 小圆点 */
+.sel_box{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sel_box li {
+    list-style: none;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    margin-right: 3px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+/* 左箭头 */
+.left_btn{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 3px;
+    border-radius: 35%;
+    opacity: 0.25;
+    cursor: pointer;
+}
+/* 右箭头 */
+.right_btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 3px;
+    border-radius: 35%;
+    opacity: 0.25;
+    cursor: pointer;
+}
+/* 当前图片的小图点样式 */
+.sel_box .cur{
+    background-color: red!important;
+    transform: scale(1.3);
+}
+
+
+/* ul.img_box {
+    position: absolute;
+    height: 420px;
+    width: 750px;
+    left: 0;
+    top: 0;
+    transform: translateY(-424px);
+}
+.img_box li{
+    float: left;
+    list-style: none;
+}
+.img_box li img{
+    display: inline-block;
+    height: 420px;
+    width: 750px;
+}
+.sel_box{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sel_box li{
+    list-style: none;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    margin-right: 3px;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.left_btn{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 3px;
+    cursor: pointer;
+}
+.right_btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.sel_box .cur{
+    background-color: red!important;
+    transform: scale(1.3);
+} */
+
+
+
+/* 功能区 */
+.FunZone {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    /* background-color: pink; */
+}
+
+.FunZone-child li{
+    float: left;
+    margin-left: 150px;
+    height: 200px;
+    width: 150px;
+}
+.FunZone-child li a{
+    position: relative;
+}
+.hidden-content,
+.hidden-content1,
+.hidden-content2,
+.hidden-content3{
+    /* position: absolute; */
+    font-size: 14px;
+    line-height: 1.5em;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    margin-top: 130px;
+    height: 100px;
+    width: 200px;
+    
+} 
+.FunZone-child li a:hover {
+    position: absolute;
+    z-index: 1;
+}
+.FunZone-child li a:hover .hidden-content{
+    margin: 10px,10px,10px,10px;
+}
+
+.FunZone-child li a{
+    /* 转显示模式 */
+    display: block;
+    /* padding: -1px 9px; */
+    height: 100px;
+    width: 200px;
+    line-height: 0;
+    margin-top: 100px;
+    /* 字体的样式 */
+    font-size: 30px;
+    letter-spacing:1px;
+    color: #050505;
+}
+
+
+.FunZone-child li a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+/* 版权区域 */
+.footer {
+    /* margin-top: 40px; */
+    padding-top: 30px;
+    height: 417px;
+    background-color: #fff;
+}
+
+.footer .left {
+    float: left;
+}
+
+.footer .left p {
+    margin: 20px 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer .left a {
+    /* 因为a是行内模式 不生效  转显示模式就可以生效了 */
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    /* 水平居中 */
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.footer .right {
+    float: right;
+}
+
+.footer .right dl {
+    float: left;
+    margin-left: 120px;
+}
+
+.footer .right dt {
+    margin-bottom: 14px;
+    font-family: MicrosoftYaHei;
+    font-stretch: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+}
+
+.footer .right dd {
+    font-family: SimSun;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333333;
+}

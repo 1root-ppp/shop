@@ -1,0 +1,334 @@
+/* index.css是用来美化首页的 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 内减模式 */
+    box-sizing: border-box;
+}
+
+li {
+    /* 去除前面的小点 */
+    list-style: none;
+}
+
+a {
+    /* 去除下划线 */
+    text-decoration: none;
+}
+
+/* 浮动的影响去除 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心  用来版心居中的*/
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    /* 上下一样的 */
+    margin: 30px auto;
+    padding-left: 150px;
+}
+
+h1 {
+    float: left;
+}
+
+/* 导航 */
+.nav {
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+    /* 测试的颜色 background-color: green; */
+}
+
+/* 因为导航区域的 三个导航不换行 执行浮动就行了 */
+.nav li {
+    float: left;
+    margin-right: 26px;
+}
+
+.nav li a {
+    /* 转显示模式 */
+    display: block;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 42px;
+    /* 字体的样式 */
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+
+/* 搜索区域 */
+.search {
+    /* 添加浮动 */
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search input {
+    float: left;
+    padding-left: 20px;
+    /*  左右加一起的尺寸要小于等于410*/
+    width: 360px;
+    height: 38px;
+    border: 0;
+}
+
+/* 这就是控制placeholder里面字体的方式 ！！ */
+.search input::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.search button {
+    /* 因为图片会换行显示 浮动 */
+    float: left;
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+}
+
+.user {
+    float: right;
+    margin-right: 35px;
+    height: 42px;
+    line-height: 42px;
+}
+
+#login a:hover {
+    cursor: pointer;
+    color: red;
+}
+#login a{
+    color: #050505;
+}
+/* order */
+
+.order{
+    position: relative;
+    /* z */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 620px;
+    background: #828185a1;
+}
+.order-infor{
+    position: absolute;
+    width: 70%;
+    height: 620px;
+    /* background-color: greenyellow; */
+    background-color: #e2e5e8;
+    border: 1.5px solid #3b3a3a;
+}
+.order-infor .left{
+    float: left;
+    width: 30%;
+    height: 620px;
+    border-right: 1.5px solid #3b3a3a;
+}
+.order-infor .right{
+    float: left;
+    width: 70%;
+    height: 620px;
+}
+.order-infor .left .top{
+    width: 100%;
+    height: 100px;
+    /* background-color: gold; */
+    border-bottom: 1px solid #3b3a3a;
+    
+}
+.order-infor .left .bottom{
+    width: 100%;
+    height: 517px;
+    /* background-color: goldenrod;  */
+}
+/* .order .order-info .left .top a{
+    display: block;
+    width:auto; margin-top:12px; 
+    float:right; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:11px; 
+    color:#999999;
+    line-height:25px;
+    letter-spacing:1px
+} */
+.order-infor .left .top  a{
+    display: block;
+    width:auto; 
+    float:right;
+    margin-right: 33%; 
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:30px; 
+    color:#050505;
+    line-height:90px    ;
+    letter-spacing:1px
+}
+.order-infor .left .top a:hover{
+    color: red;
+}
+.order-infor .left .bottom li a{
+    display: block;
+    width:auto; 
+    float:right;
+    margin-right: 33%; 
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:25px; 
+    color:#050505;
+    line-height:90px    ;
+    letter-spacing:1px
+}
+.order-infor .left .bottom li a:hover{
+    color: red;
+}
+
+/* 订单信息的填写-表单 */
+.order-infor .right {
+    
+    float: left;
+    margin-left:14%;
+    max-width: 500px;
+    height: 617px;
+    background: #e2e5e8;
+    padding: 80px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
+
+.order-infor .right label>span{
+    float: left;
+    width: 20%;
+    text-align: right;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #000;
+}
+.order-infor .right input[type="text"],
+.order-infor .right input[type="tel"],
+.order-infor .right input[type = "time"],
+.order-infor .right textarea{
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.order-infor .right textarea{
+    height: 70px;
+    padding: 5px 3px 3px 5px;
+}
+.order-infor .right .botton{
+    background: #E27575;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    text-align: center;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    transform: translate(130%,-20%);
+}
+.order-infor .right .botton:hover{
+    background: #CF7A7A;
+}
+/* footer */
+/* 版权区域 */
+.footer {
+    /* margin-top: 40px; */
+
+    padding-top: 30px;
+
+    height: 417px;
+    background-color: #fff;
+}
+
+.footer .left {
+    float: left;
+}
+
+.footer .left p {
+    margin: 20px 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer .left a {
+    /* 因为a是行内模式 不生效  转显示模式就可以生效了 */
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #00a4ff;
+    /* 水平居中 */
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.footer .right {
+    float: right;
+}
+
+.footer .right dl {
+    float: left;
+    margin-left: 120px;
+}
+
+.footer .right dt {
+    margin-bottom: 14px;
+    font-family: MicrosoftYaHei;
+    font-stretch: normal;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+}
+
+.footer .right dd {
+    font-family: SimSun;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333333;
+}

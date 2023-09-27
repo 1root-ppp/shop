@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快帮拿</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 这是网站的首页 -->
+    <!-- 布局：从外到内，从上到下，从左到右 -->
+    <!-- css：浮动/display；盒子模型；文字样式 -->
+
+    <!-- 头部：负责头部区域的样式，wrapper只负责版心效果-->
+    <div class="header wrapper">
+
+        <!-- 导航区域 -->
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="#">服务支持</a></li>
+                <li><a href="#">敬请期待</a></li>
+            </ul>
+        </div>
+
+        <!-- 搜索区域 -->
+        <div class="search">
+            <input type="text" placeholder="请输入关键字">
+            <button></button>
+        </div>
+
+        <!-- 用户 -->
+        <div class="user">
+            <span id="login"><a href="./login.html">登录/注册</a></span>
+            <!-- <span>/</span>
+            <span id="register">注册</span> -->
+        </div>
+    </div>
+
+    <!-- 轮播图banner -->
+    <div class="banner">
+        <div class="wrapper">
+            <!-- 六张图片 -->
+            <ul class="img_box">
+                <li><img src="./images/p4.jpg" alt=""></li>
+                <li><img src="./images/p1.jpg" alt=""></li>
+                <li><img src="./images/p2.jpg" alt=""></li>
+                <li><img src="./images/p3.jpg" alt=""></li>
+                <li><img src="./images/p4.jpg" alt=""></li>
+                <li><img src="./images/p1.jpg" alt=""></li>
+            </ul>
+            <!-- 中间的小圆点 -->
+            <ul class="sel_box">
+                <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+                <li data-index="3"></li>
+            </ul>
+            <!-- 左箭头 -->
+            <div class="left_btn">&lt;</div>
+            <div class="right_btn">&gt;</div>
+        </div>
+    </div>
+    <!-- 功能区 -->
+    <div class="FunZone">
+        <div class="FunZone-child wrapper">
+            <ul>
+                <li>
+                    <a href="./order.html">需要帮拿</a>
+                    <div class="hidden-content">介绍1</div>
+                </li>
+                <li>
+                    <a href="./take-order.html">帮拿</a>
+                    <div class="hidden-content1">介绍2</div>
+                </li>
+                <li>
+                    <a href="#">帮寄快递</a>
+                    <div class="hidden-content2">介绍3</div>
+                </li>
+                <li>
+                    <a href="#">费用查询</a>
+                    <div class="hidden-content3">介绍4</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 版权  注意要清除浮动的影响，在课程li 的 父级-->
+    <!-- li都浮动了 ，脱标，撑不开父级的高度 -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="left">
+                <p>快帮拿致力于帮助在校师生的便利,帮助学生提高效率,增加一些兼职岗位<br>
+                    © 2023年9月7日开起项目</p>
+                <a href="#">下载APP</a>
+            </div>
+            <div class="right">
+                <dl>
+                    <dt>服务支持</dt>
+                    <dd><a href="#">查件服务</a></dd>
+                    <dd><a href="#">帮拿服务</a></dd>
+                    <dd><a href="#">帮寄服务</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="#">关于快帮拿</a></dd>
+                    <dd><a href="#">问题反馈</a></dd>
+                    <dd><a href="#">我要投诉</a></dd>
+                </dl>
+                <dl>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
